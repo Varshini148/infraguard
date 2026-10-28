@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-AI Infrastructure Detection — InfraGuard</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand-header">
+        <div class="brand-logo">IG</div>
+        <div class="brand-text">
+          <h1>InfraGuard</h1>
+          <span>Authority Portal</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-section-title">Core Operations</div>
+        <a href="/index.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Dashboard
+        </a>
+        <a href="/pages/detection.html" class="nav-item active">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+          Multi-AI Detection
+        </a>
+        <a href="/pages/sensor-analysis.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          Sensor Analysis & AUKF
+        </a>
+        <a href="/pages/infrastructure-map.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          Infrastructure Map
+        </a>
+
+        <div class="nav-section-title">Defect Intelligence</div>
+        <a href="/pages/records.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          Defect Records
+        </a>
+        <a href="/pages/deterioration.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          Deterioration Timeline
+        </a>
+        <a href="/pages/risk-prioritization.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          Risk & Repair Priority
+        </a>
+
+        <div class="nav-section-title">Governance & Data</div>
+        <a href="/pages/dataset-management.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+          Dataset Management
+        </a>
+        <a href="/pages/model-status.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          Model Status
+        </a>
+        <a href="/pages/reports.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          Reports & Exports
+        </a>
+        <a href="/pages/settings.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Settings & Staff
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-wrapper">
+      <header class="top-bar">
+        <div class="page-title">
+          <h2>Multi-Infrastructure AI Defect Detection</h2>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <div class="grid-2" style="margin-bottom: 2rem;">
+          <!-- Upload & Parameter Form -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Inspection Media Ingestion</h3>
+              <span class="badge badge-road" id="active-category-badge">Roads</span>
+            </div>
+
+            <form id="detection-form">
+              <!-- Infrastructure Sector Tabs -->
+              <div class="form-group">
+                <label class="form-label">Select Infrastructure Domain</label>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem;">
+                  <button type="button" class="btn btn-pastel-blue cat-btn active" data-category="road">Roads</button>
+                  <button type="button" class="btn btn-secondary cat-btn" data-category="bridge">Bridges</button>
+                  <button type="button" class="btn btn-secondary cat-btn" data-category="pipeline">Pipelines</button>
+                  <button type="button" class="btn btn-secondary cat-btn" data-category="power_grid">Power Grids</button>
+                </div>
+                <input type="hidden" id="category" name="category" value="road">
+              </div>
+
+              <!-- Media Type Tabs -->
+              <div class="form-group">
+                <label class="form-label">Media Ingestion Mode</label>
+                <div style="display: flex; gap: 0.75rem;">
+                  <label style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.9rem;">
+                    <input type="radio" name="media_type" value="image" checked id="mode-image"> Image Upload
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.9rem;">
+                    <input type="radio" name="media_type" value="video" id="mode-video"> Video Stream & Frame Extraction
+                  </label>
+                </div>
+              </div>
+
+              <!-- Video Options (Hidden by default) -->
+              <div id="video-options" style="display: none; background: #f8fafc; padding: 0.75rem; border-radius: var(--radius-md); margin-bottom: 1rem;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                  <div>
+                    <label class="form-label text-small">Sampling Interval (sec)</label>
+                    <input type="number" step="0.5" id="sampling_interval" value="1.0" min="0.5" max="5.0" class="form-input">
+                  </div>
+                  <div>
+                    <label class="form-label text-small">Max Keyframes</label>
+                    <input type="number" id="max_frames" value="12" min="1" max="25" class="form-input">
+                  </div>
+                </div>
+              </div>
+
+              <!-- File Input Drop Area -->
+              <div class="form-group">
+                <label class="form-label">Upload Evidence File</label>
+                <input type="file" id="media-file" class="form-input" accept="image/*,video/*" required>
+                <span class="text-small text-secondary">Supported: JPG, PNG, WEBP, MP4, AVI, MOV (Max 50MB)</span>
+              </div>
+
+              <!-- Coordinates & Telemetry -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                <div class="form-group">
+                  <label class="form-label">Latitude (e.g. TN, India)</label>
+                  <input type="number" step="any" id="lat" class="form-input" placeholder="11.4883" value="11.4883">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Longitude (e.g. TN, India)</label>
+                  <input type="number" step="any" id="lng" class="form-input" placeholder="77.8683" value="77.8683">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Simulated AUKF Sensor Vibration (m/s²)</label>
+                <input type="number" step="0.1" id="sensor_vibration" class="form-input" placeholder="e.g. 2.4 (High vibration anomaly)" value="2.4">
+                <span class="text-small text-secondary">Values > 1.8 m/s² boost confidence to 'Sensor-supported'.</span>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem; margin-top: 1rem;">
+                <button type="submit" class="btn btn-primary" id="btn-detect" style="flex: 1;">
+                  Run AI Defect Detection
+                </button>
+                <button type="button" class="btn btn-secondary" id="btn-demo-image">
+                  Use Sample Evidence
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Model & System Info Card -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Category Model Profile & Status</h3>
+              <span class="badge badge-low" id="model-status-badge">Model Ready</span>
+            </div>
+            
+            <div id="model-info-content">
+              <div style="margin-bottom: 1rem;">
+                <h4 id="model-name" style="color: #0284c7;">Road Damage Detector (RDD-YOLOv8)</h4>
+                <div class="text-small text-secondary" id="model-version">Version 1.2.0 &bull; License: CC BY-SA 4.0</div>
+              </div>
+
+              <div style="margin-bottom: 1rem;">
+                <label class="form-label text-small">Detectable Defect Classes:</label>
+                <div id="model-classes-chips" style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+
+              <div style="margin-bottom: 1rem;">
+                <label class="form-label text-small">Weight & Inference Pipeline Status:</label>
+                <div id="model-weight-desc" style="font-size: 0.85rem; background: #f8fafc; padding: 0.75rem; border-radius: var(--radius-md);">
+                  Checking backend model status...
+                </div>
+              </div>
+
+              <div class="alert alert-info" style="margin-bottom: 0;">
+                <span id="model-limitations" class="text-small">
+                  Optimized for nadir and dashcam angles. Rainy glare or night shadows require verification.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detection Results Viewport Section -->
+        <div class="card" id="results-card" style="display: none; margin-bottom: 2rem;">
+          <div class="card-header">
+            <h3 class="card-title">Detection Findings & Evidence Storage</h3>
+            <span class="badge badge-mint" id="res-total-badge">0 Defects Identified</span>
+          </div>
+
+          <div class="grid-2">
+            <!-- Annotated Preview -->
+            <div>
+              <div class="detection-viewport">
+                <img id="annotated-preview-img" src="" alt="Annotated Defect Imagery">
+              </div>
+              <div style="margin-top: 0.75rem; display: flex; justify-content: space-between;" class="text-small text-secondary">
+                <span id="res-time-span">Inference time: -- ms</span>
+                <span id="res-status-span">Weight status: --</span>
+              </div>
+            </div>
+
+            <!-- Findings List -->
+            <div>
+              <h4 style="margin-bottom: 0.75rem;">Identified Defect Signatures</h4>
+              <div id="detections-list" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <!-- Detections injected via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/detection.js"></script>
+</body>
+</html>

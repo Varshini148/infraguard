@@ -1,0 +1,23 @@
+# InfraGuard Root .gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+*.sqlite3
+*.db
+!data/sample/
+data/uploads/*
+!data/uploads/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+.env
+venv/
+node_modules/
+dist/
+build/
+*.zip
+
+data/*.db-*

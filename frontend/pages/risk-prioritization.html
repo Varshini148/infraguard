@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risk & Repair Prioritization — InfraGuard</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="brand-header">
+        <div class="brand-logo">IG</div>
+        <div class="brand-text">
+          <h1>InfraGuard</h1>
+          <span>Authority Portal</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <div class="nav-section-title">Core Operations</div>
+        <a href="/index.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Dashboard
+        </a>
+        <a href="/pages/detection.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+          Multi-AI Detection
+        </a>
+        <a href="/pages/sensor-analysis.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          Sensor Analysis & AUKF
+        </a>
+        <a href="/pages/infrastructure-map.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          Infrastructure Map
+        </a>
+
+        <div class="nav-section-title">Defect Intelligence</div>
+        <a href="/pages/records.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          Defect Records
+        </a>
+        <a href="/pages/deterioration.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          Deterioration Timeline
+        </a>
+        <a href="/pages/risk-prioritization.html" class="nav-item active">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          Risk & Repair Priority
+        </a>
+
+        <div class="nav-section-title">Governance & Data</div>
+        <a href="/pages/dataset-management.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+          Dataset Management
+        </a>
+        <a href="/pages/model-status.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          Model Status
+        </a>
+        <a href="/pages/reports.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          Reports & Exports
+        </a>
+        <a href="/pages/settings.html" class="nav-item">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Settings & Staff
+        </a>
+      </nav>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="top-bar">
+        <div class="page-title">
+          <h2>Explainable Risk & Repair Prioritization</h2>
+        </div>
+        <div class="top-actions">
+          <button id="btn-recompute" class="btn btn-primary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            Recalculate Priority Rankings
+          </button>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <!-- Transparent Formula Documentation -->
+        <div class="alert alert-info" style="margin-bottom: 1.5rem;">
+          <div>
+            <strong>Transparent Risk Score Weights (0–100):</strong>
+            Risk = <code>0.35 × Severity + 0.20 × Asset Importance + 0.20 × Deterioration Trend + 0.15 × (Confidence + AUKF Sensor Anomaly) + 0.10 × Exposure Age</code>.
+            Rankings are fully explainable with explicit safety hazard definitions, supporting transparent municipal budget dispatch.
+          </div>
+        </div>
+
+        <!-- Prioritized Repair Schedule Table -->
+        <div class="card" style="margin-bottom: 2rem;">
+          <div class="card-header">
+            <h3 class="card-title">Authorized Repair Dispatch Schedule</h3>
+            <span class="badge badge-low" id="ranked-total-badge">0 Defects Ranked</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Defect ID</th>
+                  <th>Risk Score</th>
+                  <th>Safety Hazard Impact</th>
+                  <th>Urgency</th>
+                  <th>Contributing Factors Breakdown</th>
+                  <th>Recommended Dispatch Action</th>
+                </tr>
+              </thead>
+              <tbody id="priorities-tbody">
+                <tr>
+                  <td colspan="7" style="text-align: center; color: var(--text-light); padding: 2rem;">
+                    Loading prioritized repair rankings...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Duplicate Detection & Resolution Section -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Spatial Proximity Duplicate Detection & Uncertain Matches</h3>
+            <span class="text-small text-secondary">Prevents Double-Counting & Budget Waste</span>
+          </div>
+
+          <p class="text-small text-secondary" style="margin-bottom: 1rem;">
+            Auto-detected pairs within proximity threshold (< 35m). Merging links re-inspections to deterioration timelines while preserving audit history.
+          </p>
+
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Primary Defect</th>
+                  <th>Duplicate Candidate</th>
+                  <th>Distance</th>
+                  <th>Similarity</th>
+                  <th>Match Classification</th>
+                  <th>Resolution Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="duplicates-tbody">
+                <tr>
+                  <td colspan="7" style="text-align: center; color: var(--text-light); padding: 1.5rem;">
+                    Loading duplicate candidates...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      await loadPriorities();
+      await loadDuplicates();
+
+      document.getElementById('btn-recompute').addEventListener('click', async () => {
+        const btn = document.getElementById('btn-recompute');
+        btn.disabled = true;
+        btn.textContent = 'Recalculating Multi-Factor Scores...';
+        try {
+          await api.recalculateRisk();
+          showToast('Priority rankings re-evaluated with current telemetry.', 'low');
+          await loadPriorities();
+        } catch (e) {
+          showToast('Recalculate error: ' + e.message, 'critical');
+        } finally {
+          btn.disabled = false;
+          btn.textContent = 'Recalculate Priority Rankings';
+        }
+      });
+    });
+
+    async function loadPriorities() {
+      try {
+        const list = await api.getPriorities();
+        document.getElementById('ranked-total-badge').textContent = `${list.length} Defects Ranked`;
+
+        const tbody = document.getElementById('priorities-tbody');
+        if (list.length === 0) {
+          tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; color: var(--text-light); padding: 1.5rem;">No active repair priorities found.</td></tr>`;
+          return;
+        }
+
+        tbody.innerHTML = list.map(p => {
+          let scoreColor = '#059669';
+          if (p.risk_score >= 80) scoreColor = '#dc2626';
+          else if (p.risk_score >= 65) scoreColor = '#ea580c';
+          else if (p.risk_score >= 45) scoreColor = '#d97706';
+
+          const factorsHtml = (p.contributing_factors || []).map(f => `
+            <span class="badge badge-secondary" style="font-size: 0.72rem; margin: 2px;">${f}</span>
+          `).join('');
+
+          return `
+            <tr>
+              <td><strong style="font-size: 1.1rem; color: #0284c7;">#${p.rank}</strong></td>
+              <td><strong>${p.defect_id}</strong></td>
+              <td><span style="font-size: 1.1rem; font-weight: 800; color: ${scoreColor};">${p.risk_score.toFixed(1)}</span></td>
+              <td><span style="font-weight: 600; font-size: 0.85rem;">${p.safety_impact}</span></td>
+              <td><span class="badge ${p.estimated_urgency_days <= 7 ? 'badge-critical' : 'badge-low'}">&lt; ${p.estimated_urgency_days} days</span></td>
+              <td style="max-width: 300px;">${factorsHtml}</td>
+              <td style="font-size: 0.85rem; color: #1e293b;">${p.recommended_action}</td>
+            </tr>
+          `;
+        }).join('');
+      } catch (err) {
+        console.error('Failed to load priorities:', err);
+      }
+    }
+
+    async function loadDuplicates() {
+      try {
+        const dups = await api.getDuplicates();
+        const tbody = document.getElementById('duplicates-tbody');
+
+        if (!dups || dups.length === 0) {
+          tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; color: var(--text-light); padding: 1.5rem;">No duplicate pairs detected in active radius.</td></tr>`;
+          return;
+        }
+
+        tbody.innerHTML = dups.map(d => {
+          return `
+            <tr>
+              <td><strong>${d.primary_defect_id}</strong></td>
+              <td><strong>${d.duplicate_defect_id}</strong></td>
+              <td>${d.distance_meters.toFixed(1)}m</td>
+              <td>${Math.round(d.similarity_score * 100)}%</td>
+              <td><span class="badge ${d.match_type === 'confirmed_duplicate' ? 'badge-critical' : 'badge-medium'}">${d.match_type}</span></td>
+              <td><span class="text-small">${d.status}</span></td>
+              <td>
+                ${d.status === 'auto_detected' ? `
+                  <button class="btn btn-secondary" style="padding: 2px 6px; font-size: 11px;" onclick="resolveDup(${d.id}, 'confirm_duplicate')">Confirm Duplicate</button>
+                  <button class="btn btn-secondary" style="padding: 2px 6px; font-size: 11px;" onclick="resolveDup(${d.id}, 'reject_distinct')">Reject (Distinct)</button>
+                ` : `<span class="text-small text-secondary">Resolved</span>`}
+              </td>
+            </tr>
+          `;
+        }).join('');
+      } catch (e) {
+        console.warn('Failed to load duplicates:', e);
+      }
+    }
+
+    async function resolveDup(dupId, action) {
+      try {
+        await api.resolveDuplicate(dupId, action, 'Resolved via Authority Portal interface.');
+        showToast(`Duplicate marked: ${action}`, 'low');
+        await loadDuplicates();
+      } catch (err) {
+        showToast('Resolution error: ' + err.message, 'critical');
+      }
+    }
+  </script>
+</body>
+</html>
